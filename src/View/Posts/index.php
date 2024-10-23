@@ -17,9 +17,9 @@
     <title><?= $this->get('pageName') ?></title>
 </head>
 
-<body>
+<body class="bodyy">
     <div class="header">
-        <span>N（ベータバージョン）</span>
+        <span><?= $this->get('pageName') ?></span>
     </div>
 
     <br>
@@ -30,11 +30,11 @@
             <form method="POST" action="/Posts/create" class="post-form">
                 <div class="post-form-name">
                     <h4>名前</h4>
-                    <input type="text" id="name" name="name" class="post-form-name-input" placeholder="あなたの名前を入力してください。" maxlength="30" required>
+                    <input type="text" id="name" name="name" class="post-form-name-input form-control" placeholder="あなたの名前を入力してください。" maxlength="30" required>
                 </div>
                 <div class="post-form-message">
                     <h4>投稿文</h4>
-                    <textarea id="message" name="message" class="post-form-message-text" placeholder="投稿内容をここに入力してください。" maxlength="140" required></textarea>
+                    <textarea id="message" name="message" class="post-form-message-text form-control" placeholder="投稿内容をここに入力してください。" maxlength="140" required></textarea>
                 </div>
 
                 <div class="post-form-submit">
@@ -49,11 +49,11 @@
                         <!-- 投稿カード -->
                         <div class="post">
                             <div class="post-icon">
-                                <img src="/imgs/egg_purple.png" class="post-image" alt="egg_icon">
+                                <img src="/imgs/アイコン Twitter.png" class="post-image" alt="egg_icon">
                             </div>
                             <div class="post-info" data-id="<?=$post['id']?>">
-                                <input type="text" class="post-name post-not-edit-input" value="{名前}" readonly><br>
-                                <textarea class="post-text post-not-edit-textarea" readonly>Hello, world</textarea>
+                                <input type="text" class="post-name post-not-edit-input" value="<?=$post['name']?>" readonly><br>
+                                <textarea class="post-text post-not-edit-textarea" readonly><?=$post['message']?></textarea>
                                 <div class="post-action">
                                     <button type="button" class="post-action-btn edit-btn" onclick="editPost(this)">✒️編集</button>
                                     <button type="button" class="post-action-btn delete-btn" onclick="deletePost(this)">🗑削除</button>
@@ -66,6 +66,9 @@
                 <?php endif; ?>
             </div>
         </div>
+    </div>
+    <div class="post-icon">
+        <img src="/imgs/アイコン カレンダー.png" class="zuttoissyo" alt="egg_icon">
     </div>
 </body>
 

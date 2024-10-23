@@ -1,16 +1,30 @@
 /* 追加するCSS */
-
-
-
+.header{background-color: blueviolet;}
+.post-form{
+    display:flex
+}
+.post-form-submit{
+    margin-left: auto;
+}
+.bodyy{
+    background-color: #dfc4fa;
+}
 /* 投稿に関するCSS */
 .post {
     display: flex;
 }
 
+.zuttoissyo{
+    width: 360px;
+    bottom: 0px;
+    left:0px;
+}
 .post-icon {
     width: 120px;
 }
-
+.post-form-message{
+    margin-left: 25px;
+}
 .post-image {
     width: 100%;
 }
@@ -26,6 +40,10 @@
 .post-info {
     position: relative;
     width: 100%;
+    background-color: #996699;
+    margin: 20px;
+    border-radius: 36px;
+    padding: 10px;
 }
 
 .post-action {
